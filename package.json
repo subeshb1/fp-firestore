@@ -1,0 +1,64 @@
+{
+  "name": "fp-firestore",
+  "version": "0.0.0-development",
+  "description": "A Simple Functional Firestore library",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest ./src/index.test.js",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release",
+    "commit": "npx git-cz",
+    "build": "babel --out-dir dist --ignore *.test.js src",
+    "pre-build": "rimraf dist",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subeshb1/fp-firestore.git"
+  },
+  "keywords": [
+    "fp",
+    "firestore"
+  ],
+  "author": "'Subesh <'subeshb1@gmail.com'>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/subeshb1/fp-firestore/issues"
+  },
+  "homepage": "https://github.com/subeshb1/fp-firestore#readme",
+  "dependencies": {
+    "fp-small": "^1.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "commitizen": "^3.0.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "firebase": "^5.3.0",
+    "firebase-admin": "^6.0.0",
+    "ghooks": "^2.0.4",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.2",
+    "semantic-release": "^15.10.5",
+    "travis-deploy-once": "^5.0.9"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
