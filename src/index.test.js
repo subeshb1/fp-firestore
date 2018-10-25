@@ -1,5 +1,5 @@
-describe("Name of the group", () => {
-  it("should ", () => {
+describe("Test for Passing Travis", () => {
+  it("Does Nothing", () => {
     expect(1).toBe(1);
   });
 });
